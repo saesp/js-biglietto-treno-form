@@ -30,3 +30,13 @@ if (age < 18) { // 20% sconto minorenni
     price;
     firstTitle.innerHTML = `Il prezzo del tuo biglietto è di ${price} euro.`;
 }
+
+var km document.getElementById("km");
+
+km.addEventListener('click',
+
+  function(){
+
+  }
+
+);
