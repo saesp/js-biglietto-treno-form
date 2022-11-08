@@ -2,10 +2,15 @@
 
 
 const minPrice = 0.21;
-const firstTitle = document.getElementById("first-title");
-const button = document.querySelector("button");
+let namePass = document.getElementById("name-pass");
+let offerTic = document.getElementById("offer-tic");
+let priceTic = document.getElementById("price-tic");
+
+const inputName = document.getElementById("input-name");
 const inputKm = document.getElementById("input-km");
 const inputAge = document.getElementById("input-age");
+
+const button = document.querySelector("button");
 
 
 button.addEventListener("click",
@@ -19,8 +24,9 @@ button.addEventListener("click",
 
     if (numAge < 18) { 
         let reducedPrice = price * 80 / 100;
-        firstTitle.innerHTML = `Il prezzo del tuo biglietto è di ${price} euro, ma è scontato del 20% perchè hai meno di 18 anni. Quindi il prezzo del tuo biglietto è di ${reducedPrice} euro.`;
-        console.log("reduced price", reducedPrice);
+        namePass.innerHTML = inputName;
+        offerTic.innerHTML = "- 20%";
+        priceTic.innerHTML = reducedPrice +  "anzichè"  + price;
     } else if (numAge > 64) {
         let reducedPrice = price * 60 / 100;
         firstTitle.innerHTML = `Il prezzo del tuo biglietto è di ${price} euro, ma è scontato del 40% perchè hai più di 65 anni. Quindi il prezzo del tuo biglietto è di ${reducedPrice} euro.`;
@@ -30,4 +36,5 @@ button.addEventListener("click",
         console.log("price", price);
     }    
   }
-);
+)
+
