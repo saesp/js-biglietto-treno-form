@@ -33,20 +33,20 @@ button.addEventListener("click",
         let reducedPrice = price * 80 / 100;
         namePass.innerHTML = nameVal;
         offerTic.innerHTML = "- 20%";
-        priceTic.innerHTML = `${reducedPrice} invece di ${price}`;
+        priceTic.innerHTML = `${reducedPrice} euro invece di ${price} euro`;
         console.log("reduced price", reducedPrice);
 
     } else if (numAge > 64) { // >64 -40%
         let reducedPrice = price * 60 / 100;
-        namePass.innerHTML = inputName;
+        namePass.innerHTML = nameVal;
         offerTic.innerHTML = "- 40%";
-        priceTic.innerHTML = `${reducedPrice} invece di ${price}`;
+        priceTic.innerHTML = `${reducedPrice} euro invece di ${price} euro`;
         console.log("reduced price", reducedPrice);
 
     } else {
-        namePass.innerHTML = inputName;
-        offerTic.innerHTML = "standart";
-        priceTic.innerHTML = price;
+        namePass.innerHTML = nameVal;
+        offerTic.innerHTML = "Nessuna";
+        priceTic.innerHTML = price + " euro";
         console.log("price", price);
     }    
   }
