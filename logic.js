@@ -16,6 +16,7 @@ const button = document.querySelector("button");
 button.addEventListener("click",
 
   function(){
+    let nameVal = inputName.value;
     let numKm = inputKm.value;
     inputKm.value = null;
     let numAge = inputAge.value;
@@ -24,7 +25,7 @@ button.addEventListener("click",
 
     if (numAge < 18) { 
         let reducedPrice = price * 80 / 100;
-        namePass.innerHTML = inputName;
+        namePass.innerHTML = nameVal;
         offerTic.innerHTML = "- 20%";
         priceTic.innerHTML = `${reducedPrice} invece di ${price}`;
         console.log("reduced price", reducedPrice);
