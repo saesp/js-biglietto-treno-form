@@ -26,13 +26,18 @@ button.addEventListener("click",
         let reducedPrice = price * 80 / 100;
         namePass.innerHTML = inputName;
         offerTic.innerHTML = "- 20%";
-        priceTic.innerHTML = reducedPrice +  "anzichè"  + price;
+        priceTic.innerHTML = `${reducedPrice} invece di ${price}`;
+        console.log("reduced price", reducedPrice);
     } else if (numAge > 64) {
         let reducedPrice = price * 60 / 100;
-        firstTitle.innerHTML = `Il prezzo del tuo biglietto è di ${price} euro, ma è scontato del 40% perchè hai più di 65 anni. Quindi il prezzo del tuo biglietto è di ${reducedPrice} euro.`;
+        namePass.innerHTML = inputName;
+        offerTic.innerHTML = "- 40%";
+        priceTic.innerHTML = `${reducedPrice} invece di ${price}`;
         console.log("reduced price", reducedPrice);
     } else {
-        firstTitle.innerHTML = `Il prezzo del tuo biglietto è di ${price} euro.`;
+        namePass.innerHTML = inputName;
+        offerTic.innerHTML = "standart";
+        priceTic.innerHTML = price;
         console.log("price", price);
     }    
   }
